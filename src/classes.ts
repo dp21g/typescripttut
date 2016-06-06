@@ -18,7 +18,7 @@ class ReferenceItem {
     //has to be referenced ReferenceItem.department
     static department: string = "Research";
         
-    constructor(public title: string, private year:number){
+    constructor(public title: string, public year:number){
         console.log('Creating a new ReferenceItem');
     }
     

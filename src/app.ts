@@ -1,8 +1,12 @@
 import { sayHello } from './greet';
 import { Category } from './enums';
 import { Book , DamageLogger, Author, Librarian } from './interfaces';
+//another way to import all modules from a file is:
+// import * as Interfaces from '.interfaces'; // now you can reference these with Interfaces.Book;
 import { UniversityLibrarian , ReferenceItem} from './classes'
+import refBook from "./Encyclopedia";
 
+let newRef = new refBook();
 
 function showHello(divName: string, name: string) {
     const elt = document.getElementById(divName);
@@ -118,7 +122,7 @@ function showHello(divName: string, name: string) {
     
     let mobyDick = new ReferenceItem("Moby mate", 1230);
     mobyDick.printItem();
-    mobyDick.publisher = 'Random text up here';
+    mobyDick.publisher = 'Random up test';
     console.log('mobyDick.publisher:', mobyDick.publisher);
     
     
